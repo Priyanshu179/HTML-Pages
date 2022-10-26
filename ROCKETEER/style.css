@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&family=Vollkorn:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: url(./img/home__background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho-imagem {
+    Width: 107px;
+    Height: 33px;
+}
+
+.cabecalho-nav {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+.main-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15vh;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.main-paragraf {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    margin-left: 200px;
+    margin-top: 45px;
+}
+
+.email-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.email-box-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+.email-box-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.email-box-input {
+    width: 419px;
+    height: 56px;
+    margin-left: 200px;
+    margin-top: 20px;
+    background: rgba(89, 2, 9, 0.5);
+    border-radius: 16px;
+    border-style: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    padding: 15px;
+    outline: none;
+}
+
+.email-box-button-submit {
+    width: 250px;
+    height: 56px;
+    margin-left: 45px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(0deg, rgba(4, 8, 13, 0.4), rgba(4, 8, 13, 0.4)), #024959;
+    border-radius: 16px;
+    border-style: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.email-box-button-submit:hover {
+    background: linear-gradient(0deg, rgba(4, 8, 13, 0.11), rgba(4, 8, 13, 0.336)), #024959;
+}
+
+
+a {
+    color: white;
+}
+
+@media (max-width: 999px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .cabecalho-nav {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background: rgba(89, 2, 9, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+
+
+}
+
+.cabecalho-nav.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
